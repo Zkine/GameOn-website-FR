@@ -532,6 +532,8 @@ footer {
   src: url("../font/DM_Sans/DMSans-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  font-display: optional;
+  font-display: swap;
 }
 
 * {
@@ -642,30 +644,6 @@ footer {
   margin: auto;
 }
 
-@media screen and (max-width: 1440px) {
-
-  .conteneurnav {
-    width: 90.112%;
-    margin: 50px 3% 67px auto;
-  }
-
-  .navbar {
-    margin-right: 0px
-  }
-
-  .hero-section {
-    width: 96.225%;
-  }
-}
-
-@media screen and (max-width: 1099px) {
-  .navbar {
-    padding: 0;
-    width: 100%;
-  }
-}
-
-
 .hero-content {
   padding: 9px 67px;
   grid-column: 1/6;
@@ -673,22 +651,16 @@ footer {
   border-radius: 10px 0 0 10px;
   color: #fff;
   position: relative;
-  text-align: left;
-}
-
-.hero-content>* {
-  position: relative;
-  z-index: 1;
 }
 
 .hero-headline {
-  font-size: 5.9rem;
+  font-size: 4.6em;
   font-weight: normal;
   white-space: nowrap;
 }
 
 .hero-text {
-  font-weight: normal;
+  font-weight: 100;
   margin-top: 109px;
   padding: 0;
 }
@@ -745,7 +717,32 @@ footer {
   background: #3876ac;
 }
 
+@media screen and (max-width: 1440px) {
 
+  .conteneurnav {
+    width: 90.112%;
+    margin: 50px 3% 67px auto;
+  }
+
+  .navbar {
+    margin-right: 0px
+  }
+
+  .hero-section {
+    width: 96.225%;
+  }
+
+  .hero-headline {
+    font-size: 6.5vw;
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .navbar {
+    padding: 0;
+    width: 100%;
+  }
+}
 
 /* Modal form */
 
@@ -952,7 +949,7 @@ input[data-error]::after {
   background: #fe142f;
   display: block;
   border-radius: 7px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
   border: 0;
