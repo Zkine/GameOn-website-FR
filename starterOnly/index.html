@@ -100,15 +100,18 @@
             </div>
             <div class="formData">
               <label>Date de naissance</label><br>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+              <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
+                onfocus="this.type='date'" onblur="this.type='text'" /><br>
             </div>
             <div class="formData">
               <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              <!-- ajout de la propriete placeholder -->
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="19">
             </div>
             <p class="text-label">À quel tournoi souhaitez-vous participer cette année ?</p>
             <div class="formData">
-              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" />
+              <!-- ajout de la propriete checked -->
+              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
                 New York</label>
