@@ -1,19 +1,8 @@
 // DOM Elements
-const menu = document.getElementById("menu");
 const modalbg = document.querySelector(".bground");
+const modalclose = document.querySelector(".close");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-
-// function qui permet de faire apparaitre la modal
-function editNav() {
-  const topNav = document.getElementById("myTopnav");
-  if (topNav.className === "topnav") {
-    topNav.className += "responsive";
-  } else {
-    topNav.className = "topnav";
-  }
-}
-menu.addEventListener("click", editNav);
 
 // launch modal form
 function launchModal() {
@@ -21,3 +10,12 @@ function launchModal() {
 }
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+
+// Fermeture de la modale
+function closeModal(event) {
+  const baliseArticle = event.target.closest("aside");
+  if (baliseArticle.hasAttribute("style")) {
+    baliseArticle.removeAttribute("style");
+  }
+}
+modalclose.addEventListener("click", closeModal);
