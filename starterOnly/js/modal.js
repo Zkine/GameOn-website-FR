@@ -13,7 +13,6 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // Fermeture de la modale
 function closeModal(event) {
-  event.stopPropagation();
   const baliseArticle = event.target.closest("aside");
   if (baliseArticle.hasAttribute("style")) {
     baliseArticle.removeAttribute("style");
