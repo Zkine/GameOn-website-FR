@@ -3,6 +3,7 @@ const modalbg = document.querySelector(".bground");
 const modalclose = document.querySelector(".close");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
+console.log(modalBtn);
 
 // launch modal form
 function launchModal() {
@@ -16,6 +17,10 @@ function closeModal(event) {
   const baliseArticle = event.target.closest("aside");
   if (baliseArticle.hasAttribute("style")) {
     baliseArticle.removeAttribute("style");
+    // reset du formulaire après la fermeture
+    document.reserve.reset();
   }
 }
 modalclose.addEventListener("click", closeModal);
+
+function resetModal() {}
