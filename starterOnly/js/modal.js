@@ -22,5 +22,3 @@ function closeModal(event) {
   }
 }
 modalclose.addEventListener("click", closeModal);
-
-function resetModal() {}
