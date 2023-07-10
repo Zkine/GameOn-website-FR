@@ -628,12 +628,28 @@ footer {
   margin-top: 109px;
 }
 
+.btn-submit,
+.btn-signup {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 46px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+
 .btn-signup {
   outline: none;
   text-transform: capitalize;
+  border-radius: 7px;
   font-size: 1.3rem;
   padding: 15px 23px;
-  margin-top: 77px;
+  margin: 0;
+  margin-top: 59px;
 }
 
 .hero-img {
@@ -672,7 +688,6 @@ footer {
   padding: 2em;
   color: #fff;
   padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -991,18 +1006,7 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 
-.btn-submit,
-.btn-signup {
-  background: #fe142f;
-  display: block;
-  margin: 0 auto;
-  border-radius: 7px;
-  font-size: 1rem;
-  padding: 12px 82px;
-  color: #fff;
-  cursor: pointer;
-  border: 0;
-}
+
 
 /* custom select styles */
 .custom-select {
