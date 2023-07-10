@@ -550,6 +550,10 @@ body {
   margin: 50px 0 67px 0;
 }
 
+.topnavresponsive {
+  margin: 50px 0 67px 0;
+}
+
 .conteneurnav {
   display: flex;
   justify-content: space-between;
@@ -827,6 +831,10 @@ body {
     padding: 30px 30px 0 30px;
   }
 
+  .conteneurnav {
+    margin: 0 auto;
+  }
+
   .topnavresponsive {
     width: 100%;
     margin: auto;
@@ -897,6 +905,7 @@ body {
     margin-top: 5px;
     padding: 4px;
     z-index: 0;
+    position: relative;
   }
 
   .icon:after {
@@ -945,6 +954,26 @@ body {
     background-color: #ff0000;
     color: #ffffff;
     border-radius: 15px;
+  }
+
+  .hero-content {
+    margin: 0;
+    padding: 12px
+  }
+
+  .hero-headline {
+    margin: 0;
+    font-size: 9vw;
+  }
+
+  .hero-text {
+    font-size: 3vw;
+    margin-top: 30px;
+  }
+
+  .copyrights {
+    margin: 30px auto;
+    text-align: center;
   }
 }
 
