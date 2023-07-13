@@ -44,7 +44,7 @@
           </ul>
         </nav>
         <!-- modification de la balise <a> en <button> -->
-        <button class="icon" aria-label="Menu" aria-pressed="false" id="menu">
+        <button class="icon" aria-label="Menu" aria-pressed="false" id="menu" onclick="editNav(this)">
           <i class="fa fa-bars"></i>
         </button>
         <!-- <a href="javascript:void(0);" class="icon" onclick="editNav()">
@@ -83,31 +83,34 @@
     <!-- modification de la balise <div> en <aside> -->
     <aside class="bground">
       <div class="content">
-        <span class="close"></span>
+        <button class="close" aria-label="Button close" aria-pressed="false" onclick="closeModal(this)"></button>
         <div class="modal-body">
-          <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
-            <div class="formData">
-              <label>Prénom</label><br>
+          <form name="reserve" id="formulaire" action="index.html" method="get" onsubmit="validate(event)" novalidate>
+            <div class="formData" data-error-visible="false"
+              data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom.">
+              <label class="label">Prénom</label><br>
               <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
             </div>
-            <div class="formData">
-              <label>Nom</label><br>
+            <div class="formData" data-error-visible="false"
+              data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom.">
+              <label class="label">Nom</label><br>
               <input class="text-control" type="text" id="last" name="last" /><br>
             </div>
-            <div class="formData">
-              <label>E-mail</label><br>
+            <div class="formData" data-error-visible="false" data-error="Veuillez entrer un email valide.">
+              <label class="label">E-mail</label><br>
               <input class="text-control" type="email" id="email" name="email" /><br>
             </div>
-            <div class="formData">
-              <label>Date de naissance</label><br>
+            <div class="formData" data-error-visible="false" data-error="Veuillez entrer un date de naissance.">
+              <label class="label">Date de naissance</label><br>
               <!-- ajout des proprietes onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
               <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
-                onfocus="this.type='date'" onblur="this.type='text'" /><br>
+                onfocus="this.type='date'" onblur="this.type='text'" required /><br>
             </div>
-            <div class="formData">
-              <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+            <div class="formData" data-error-visible="false" data-error="Vous devez choisir une option.">
+              <label class="label">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
               <!-- ajout de la propriete placeholder -->
-              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="19">
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="19"
+                required />
             </div>
             <p class="text-label">À quel tournoi souhaitez-vous participer cette année ?</p>
             <div class="formData">
@@ -138,9 +141,11 @@
                 Portland</label>
             </div>
 
-            <div class="formData">
-              <!-- suppression de la propriete required dans la balise <label> et ajout de celle-ci dans la balise <input> -->
-              <input class="checkbox-input" type="checkbox" name="checkbox1" id="checkbox1" checked required />
+            <div class="formData" data-error-visible="false"
+              data-error="Vous devez vérifier que vous acceptez les termes et conditions.">
+              <!-- suppression de la propriete required dans la balise <label> et ajout de celle-ci dans la balise <input>,
+              pas d'attribut checked conformement au RGPD -->
+              <input class="checkbox-input" type="checkbox" name="checkbox1" id="checkbox1" />
               <label class="checkbox2-label" for="checkbox1">
                 <span class="checkbox-icon"></span>
                 J'ai lu et accepté les conditions d'utilisation.
