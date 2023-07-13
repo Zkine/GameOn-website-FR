@@ -72,27 +72,23 @@ inputMail.addEventListener("input", (e) => {
 
 // vérification de la date de naissance
 const inputDateNaissance = document.getElementById("birthdate");
-inputDateNaissance.addEventListener(
-  "input",
-  (e) => {
-    e.stopPropagation();
-    const inputAge = inputDateNaissance.value;
-    const testNaissance = inputDateNaissance.reportValidity();
-    const date = new Date(inputAge);
-    const month_diff = Date.now() - date.getTime();
-    const age_dt = new Date(month_diff);
-    var année = age_dt.getUTCFullYear();
-    var age = Math.abs(année - 1970);
+inputDateNaissance.addEventListener("input", (e) => {
+  e.stopPropagation();
+  const inputAge = inputDateNaissance.value;
+  const testNaissance = inputDateNaissance.reportValidity();
+  const date = new Date(inputAge);
+  const month_diff = Date.now() - date.getTime();
+  const age_dt = new Date(month_diff);
+  var année = age_dt.getUTCFullYear();
+  var age = Math.abs(année - 1970);
+  console.log(age);
 
-    if (testNaissance && age > 13) {
-      formData[3].dataset.errorVisible = false;
-    } else {
-      formData[3].dataset.errorVisible = true;
-      alert("Vous devez avoir plus de 13 ans pour participer aux tournois");
-    }
-  },
-  false
-);
+  if (testNaissance && age > 13) {
+    formData[3].dataset.errorVisible = false;
+  } else {
+    formData[3].dataset.errorVisible = true;
+  }
+});
 
 // vérification de la quantité
 const inputQuantity = document.getElementById("quantity");
