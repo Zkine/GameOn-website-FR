@@ -87,21 +87,21 @@
         <div class="modal-body">
           <form name="reserve" id="formulaire" action="index.html" method="get" onsubmit="validate(event)" novalidate>
             <div class="formData" data-error-visible="false"
-              data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom.">
+              data-error="2 caractères minimums(les traits d'union et espaces sont autorisés).">
               <label class="label">Prénom</label><br>
               <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
             </div>
             <div class="formData" data-error-visible="false"
-              data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom.">
+              data-error="2 caractères minimums(les traits d'union et espaces sont autorisés).">
               <label class="label">Nom</label><br>
               <input class="text-control" type="text" id="last" name="last" /><br>
             </div>
-            <div class="formData" data-error-visible="false" data-error="Veuillez entrer un email valide.">
+            <div class="formData" data-error-visible="false"
+              data-error="Entrer un email valide(le @ ainsi que le . en fin de l'email et obligatoire).">
               <label class="label">E-mail</label><br>
               <input class="text-control" type="email" id="email" name="email" /><br>
             </div>
-            <div class="formData" data-error-visible="false"
-              data-error="Veuillez entrer un date de naissance supérieur à 13 ans.">
+            <div class="formData" data-error-visible="false" data-error="Votre âge doit être supérieur à 13 ans.">
               <label class="label">Date de naissance</label><br>
               <!-- ajout des proprietes onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
               <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
@@ -143,7 +143,7 @@
             </div>
 
             <div class="formData" data-error-visible="false"
-              data-error="Vous devez vérifier que vous acceptez les termes et conditions.">
+              data-error="Vous devez vérifier et acceptez les conditions générales d'utilisation.">
               <!-- suppression de la propriete required dans la balise <label> et ajout de celle-ci dans la balise <input>,
               pas d'attribut checked conformement au RGPD -->
               <input class="checkbox-input" type="checkbox" name="checkbox1" id="checkbox1" />

@@ -21,7 +21,6 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // Fermeture de la modale
 function closeModal(event) {
   const baliseArticle = event.closest("aside");
-  console.log(baliseArticle);
   const formValue = baliseArticle.querySelector("formulaire");
   if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
@@ -31,6 +30,7 @@ function closeModal(event) {
   } else if (baliseArticle.hasAttribute("style") && !formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
+    location.reload();
   }
 }
 
