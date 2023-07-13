@@ -8,9 +8,9 @@
   <!-- <title>Reservation</title> -->
   <title>GameOn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
   <!-- ajout du css normalize -->
   <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" /> -->
 </head>
@@ -86,35 +86,35 @@
         <button class="close" aria-label="Button close" aria-pressed="false" onclick="closeModal(this)"></button>
         <div class="modal-body">
           <form name="reserve" id="formulaire" action="index.html" method="get" onsubmit="validate(event)" novalidate>
-            <div class="formData" data-error-visible="false"
-              data-error="2 caractères minimums(les traits d'union et espaces sont autorisés).">
+            <div class="formdata" data-error-visible="false"
+              data-error="2 caractères minimums,les traits d'union et les espaces sont autorisés.">
               <label class="label">Prénom</label><br>
               <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
             </div>
-            <div class="formData" data-error-visible="false"
-              data-error="2 caractères minimums(les traits d'union et espaces sont autorisés).">
+            <div class="formdata" data-error-visible="false"
+              data-error="2 caractères minimums,les traits d'union et les espaces sont autorisés.">
               <label class="label">Nom</label><br>
               <input class="text-control" type="text" id="last" name="last" /><br>
             </div>
-            <div class="formData" data-error-visible="false"
-              data-error="Entrer un email valide(le @ ainsi que le . en fin de l'email et obligatoire).">
+            <div class="formdata" data-error-visible="false"
+              data-error="Pour valider un email, un @ ainsi qu'un . en fin de l'email est obligatoire.">
               <label class="label">E-mail</label><br>
               <input class="text-control" type="email" id="email" name="email" /><br>
             </div>
-            <div class="formData" data-error-visible="false" data-error="Votre âge doit être supérieur à 13 ans.">
+            <div class="formdata" data-error-visible="false" data-error="Votre âge doit être supérieur à 13 ans.">
               <label class="label">Date de naissance</label><br>
               <!-- ajout des proprietes onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
               <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
                 onfocus="this.type='date'" onblur="this.type='text'" required /><br>
             </div>
-            <div class="formData" data-error-visible="false" data-error="Vous devez choisir une option.">
+            <div class="formdata" data-error-visible="false" data-error="Vous devez choisir une option.">
               <label class="label">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
               <!-- ajout de la propriete placeholder -->
               <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="19"
                 required />
             </div>
             <p class="text-label">À quel tournoi souhaitez-vous participer cette année ?</p>
-            <div class="formData">
+            <div class="formdata conteneur-location">
               <!-- ajout de la propriete checked -->
               <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked />
               <label class="checkbox-label" for="location1">
@@ -142,7 +142,7 @@
                 Portland</label>
             </div>
 
-            <div class="formData" data-error-visible="false"
+            <div class="formdata" data-error-visible="false"
               data-error="Vous devez vérifier et acceptez les conditions générales d'utilisation.">
               <!-- suppression de la propriete required dans la balise <label> et ajout de celle-ci dans la balise <input>,
               pas d'attribut checked conformement au RGPD -->

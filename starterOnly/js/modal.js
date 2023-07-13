@@ -1,7 +1,7 @@
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
+const formData = document.querySelectorAll(".formdata");
 
 //////////////////////////////////ouverture et fermeture de la modale\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -10,7 +10,7 @@ function launchModal(e) {
   const ariaClosest = e.target.closest("main");
   const closeAria = ariaClosest.querySelector(".close");
   modalbg.style.display = "block";
-  //condition qui permet de basculer de false à true la croix de fermeture de la modale
+  //condition qui permet de basculer l'attribut aria-pressed" de false à true la croix de fermeture de la modale
   if (!closeAria.hasAttribute("style")) {
     closeAria.setAttribute("aria-pressed", false);
   }
@@ -21,7 +21,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // Fermeture de la modale
 function closeModal(event) {
   const baliseArticle = event.closest("aside");
-  const formValue = baliseArticle.querySelector("formulaire");
+  const formValue = baliseArticle.querySelector("#formulaire");
   if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
