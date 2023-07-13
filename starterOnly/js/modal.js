@@ -30,6 +30,7 @@ function closeModal(event) {
   } else if (baliseArticle.hasAttribute("style") && !formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
+    // reload du formulaire après la fermeture de validation
     location.reload();
   }
 }
@@ -84,8 +85,8 @@ inputDateNaissance.addEventListener("input", (e) => {
   const date = new Date(inputAge);
   const month_diff = Date.now() - date.getTime();
   const age_dt = new Date(month_diff);
-  var année = age_dt.getUTCFullYear();
-  var age = Math.abs(année - 1970);
+  const année = age_dt.getUTCFullYear();
+  const age = Math.abs(année - 1970);
 
   if (testNaissance && age > 13) {
     formData[3].dataset.errorVisible = false;
@@ -94,7 +95,7 @@ inputDateNaissance.addEventListener("input", (e) => {
   }
 });
 
-// vérification de la quantité
+// vérification du nontre de tournois joués
 const inputQuantity = document.getElementById("quantity");
 inputQuantity.addEventListener("input", (e) => {
   e.stopPropagation();

@@ -121,7 +121,6 @@ body {
 
 .main {
   font-size: 130%;
-  font-weight: bolder;
   margin: 20px 5.255% 0px 5.255%;
 }
 
@@ -227,7 +226,6 @@ body {
   animation: modalopen 800ms;
   background: #232323;
   border-radius: 10px;
-  overflow: hidden;
   position: relative;
   color: #fff;
   padding-top: 10px;
@@ -719,6 +717,32 @@ body {
   .copyrights {
     margin: 30px auto;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 535px) {
+
+  .topnav {
+    padding: 30px 12px 0 12px;
+  }
+
+  .conteneurnav {
+    width: 100%;
+    margin: 0;
+  }
+
+
+  .main {
+    margin: 0;
+  }
+
+  .content {
+    margin: 75px 0 0 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .modal-body {
+    margin: 15px 0 0 0;
   }
 }
 
