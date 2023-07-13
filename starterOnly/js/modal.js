@@ -21,11 +21,15 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // Fermeture de la modale
 function closeModal(event) {
   const baliseArticle = event.closest("aside");
-  if (baliseArticle.hasAttribute("style")) {
+  console.log(baliseArticle);
+  const formValue = baliseArticle.querySelector("formulaire");
+  if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
-    event.setAttribute("aria-pressed", true);
     // reset du formulaire après la fermeture
     document.reserve.reset();
+  } else if (baliseArticle.hasAttribute("style") && !formValue) {
+    baliseArticle.removeAttribute("style");
+    event.setAttribute("aria-pressed", true);
   }
 }
 
@@ -81,7 +85,6 @@ inputDateNaissance.addEventListener("input", (e) => {
   const age_dt = new Date(month_diff);
   var année = age_dt.getUTCFullYear();
   var age = Math.abs(année - 1970);
-  console.log(age);
 
   if (testNaissance && age > 13) {
     formData[3].dataset.errorVisible = false;
