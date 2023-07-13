@@ -25,6 +25,7 @@ function closeModal(event) {
   const formValue = baliseArticle.querySelector("formulaire");
   if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
+    event.setAttribute("aria-pressed", true);
     // reset du formulaire après la fermeture
     document.reserve.reset();
   } else if (baliseArticle.hasAttribute("style") && !formValue) {
