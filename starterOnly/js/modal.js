@@ -35,7 +35,7 @@ function closeModal(event) {
 }
 
 //////////////////////////////////contrôle du formulaire\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const regExpNomPrenom = new RegExp("^[a-zA-Z -]{2,}$");
+const regExpNomPrenom = new RegExp("^[a-zA-Z-]{2,10}$");
 const regExpEmail = new RegExp(
   "^[a-z0-9.-_]+[@]{1}[a-z0-9.-_]+[.]{1}[a-z]{2,4}$"
 );
