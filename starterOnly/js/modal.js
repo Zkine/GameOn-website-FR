@@ -2,7 +2,7 @@
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formdata");
-
+const footer = document.querySelector(".footer");
 //////////////////////////////////ouverture et fermeture de la modale\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // launch modal form
@@ -10,6 +10,7 @@ function launchModal(e) {
   const ariaClosest = e.target.closest("main");
   const closeAria = ariaClosest.querySelector(".close");
   modalbg.style.display = "block";
+  footer.style.display = "none";
   //condition qui permet de basculer l'attribut aria-pressed" de false à true la croix de fermeture de la modale
   if (!closeAria.hasAttribute("style")) {
     closeAria.setAttribute("aria-pressed", false);
@@ -25,18 +26,20 @@ function closeModal(event) {
   if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
+    footer.style.display = "flex";
     // reset du formulaire après la fermeture
     document.reserve.reset();
   } else if (baliseArticle.hasAttribute("style") && !formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
+    footer.style.display = "flex";
     // reload du formulaire après la fermeture de validation
     location.reload();
   }
 }
 
 //////////////////////////////////contrôle du formulaire\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const regExpNomPrenom = new RegExp("^[a-zA-Z-]{2,10}$");
+const regExpNomPrenom = new RegExp("^[a-zA-Z- ]{2,10}$");
 const regExpEmail = new RegExp(
   "^[a-z0-9.-_]+[@]{1}[a-z0-9.-_]+[.]{1}[a-z]{2,4}$"
 );
