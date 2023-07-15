@@ -767,6 +767,7 @@ body {
     margin: 0;
     position: relative;
     height: 100%;
+    padding: 20px 15px 0px 15px;
   }
 
   .bground {
@@ -830,10 +831,6 @@ body {
 
   .topnavresponsive {
     padding: 15px 15px 0 15px;
-  }
-
-  .main {
-    padding: 20px 15px 0px 15px;
   }
 
   .hero-headline {
