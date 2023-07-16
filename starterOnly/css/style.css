@@ -269,6 +269,14 @@ body {
   margin: 15px auto;
 }
 
+#quantity {
+  padding: 8px 8px 30px 15px;
+}
+
+#quantity::placeholder {
+  color: #000;
+}
+
 .formdata[data-error]::after {
   content: attr(data-error);
   font-size: 0.6em;
@@ -382,7 +390,7 @@ body {
   white-space: nowrap;
   position: absolute;
   left: -30px;
-  top: -1px;
+  top: -4px;
   transition: 0.3s;
 }
 
@@ -750,7 +758,6 @@ body {
     position: relative;
     padding: 0;
   }
-
 
   .topnavresponsive {
     position: relative;

@@ -102,7 +102,7 @@ inputDateNaissance.addEventListener("input", (e) => {
 const inputQuantity = document.getElementById("quantity");
 inputQuantity.addEventListener("input", (e) => {
   e.stopPropagation();
-  const testQuantity = inputQuantity.reportValidity();
+  testQuantity = inputQuantity.reportValidity();
   if (testQuantity) {
     formData[4].dataset.errorVisible = false;
   } else {
