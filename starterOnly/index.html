@@ -43,6 +43,22 @@
             </li>
           </ul>
         </nav>
+
+
+        <!-- <div class="main-navbar">
+      
+          <a href="#" class="active"><span>Accueil</span></a>
+          <a href="#"><span>Détails de l'évènement</span></a>
+          <a href="#"><span>À propos</span></a>
+          <a href="#"><span>Contact</span></a>
+          <a href="#"><span>Évènements passés</span></a>
+          <a href="javascript:void(0);" class="icon" onclick="editNav()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div> -->
+
+
+
         <!-- modification de la balise <a> en <button> -->
         <button class="icon" aria-label="Menu" aria-pressed="false" id="menu" onclick="editNav(this)">
           <i class="fa fa-bars"></i>
@@ -56,7 +72,6 @@
   <main class="main">
     <!-- modification de la balise <div> en <article> -->
     <article class="hero-section">
-      <!-- modification de la balise <div> en <section> -->
       <div class="hero-content">
         <h1 class="hero-headline">
           Marathon national<br>
@@ -70,7 +85,6 @@
           je m'inscris
         </button>
       </div>
-      <!-- modification de la balise <div> en <section> -->
       <div class="hero-img">
         <img src="./assets/bg_img.jpg" alt="img d'une joueuse mains levées avec une manette de jeuxvidéo"
           class="img-hero" />
@@ -83,6 +97,8 @@
     <!-- modification de la balise <div> en <aside> -->
     <aside class="bground">
       <div class="content">
+        <!-- modification de la balise <span> en <button> -->
+        <!-- <span class="close"></span> -->
         <button class="close" aria-label="Button close" aria-pressed="false" onclick="closeModal(this)"></button>
         <div class="modal-body">
           <form name="reserve" id="formulaire" action="index.html" method="post" onsubmit="validate(event)" novalidate>
@@ -103,19 +119,19 @@
             </div>
             <div class="formdata" data-error-visible="false" data-error="Votre âge doit être supérieur à 13 ans.">
               <label class="label">Date de naissance</label><br>
-              <!-- ajout des proprietes onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
+              <!-- ajout des propriétés onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
               <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
                 onfocus="this.type='date'" onblur="this.type='text'" required /><br>
             </div>
             <div class="formdata" data-error-visible="false" data-error="Vous devez choisir une option.">
               <label class="label">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-              <!-- ajout de la propriete placeholder -->
+              <!-- ajout de la propriété placeholder -->
               <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="19"
                 required />
             </div>
             <p class="text-label">À quel tournoi souhaitez-vous participer cette année ?</p>
             <div class="formdata conteneur-location">
-              <!-- ajout de la propriete checked -->
+              <!-- ajout de la propriété checked -->
               <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
@@ -144,7 +160,7 @@
 
             <div class="formdata" data-error-visible="false"
               data-error="Vous devez vérifier et acceptez les conditions générales d'utilisation.">
-              <!-- suppression de la propriete required dans la balise <label> et ajout de celle-ci dans la balise <input>,
+              <!-- suppression de la propriété required dans la balise <label> et ajout de celle-ci dans la balise <input>,
               pas d'attribut checked conformement au RGPD -->
               <input class="checkbox-input" type="checkbox" name="checkbox1" id="checkbox1" />
               <label class="checkbox2-label" for="checkbox1">
@@ -160,9 +176,10 @@
               </label>
               <br>
             </div>
-            <!-- modification de la balise <imput> en <button> et suppression de la class="button" -->
-            <button class="btn-submit">C'est parti</button>
-            <!-- <input class="btn-submit" type="submit" class="button" value="C'est parti" /> -->
+            <!-- modification de la balise <input> en <button> -->
+            <!-- <input class="btn-submit" type="submit" class="button" value="C'est parti"
+              /> -->
+            <button class="button btn-submit ">C'est parti</button>
           </form>
         </div>
       </div>

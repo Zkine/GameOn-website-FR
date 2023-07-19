@@ -103,6 +103,12 @@ body {
   border-radius: 15px;
 }
 
+.link:focus {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
 .active {
   background-color: #ff0000;
   color: #ffffff;
@@ -216,6 +222,7 @@ body {
   width: 100%;
   overflow: auto;
   background-color: white;
+  z-index: 1;
 }
 
 .content {
@@ -294,6 +301,10 @@ body {
   opacity: 1;
 }
 
+.formdata[data-error-visible="true"] .text-control {
+  border: 2px solid #e54858;
+}
+
 .label {
   font-size: 13px;
   font-weight: normal;
@@ -310,10 +321,6 @@ body {
   height: 58px;
   border: 0.8px solid #ccc;
   outline: none;
-}
-
-.formdata[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
 }
 
 .text-label {
@@ -433,9 +440,7 @@ body {
 .button {
   background: #fe142f;
   margin-top: 0.5em;
-  padding: 1em;
   color: #fff;
-  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
 }
@@ -443,8 +448,6 @@ body {
 .button:hover {
   background: #3876ac;
 }
-
-/* custom select end */
 
 .conteneur-inscription {
   width: 100%;

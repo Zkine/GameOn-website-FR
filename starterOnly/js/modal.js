@@ -67,7 +67,7 @@ inputNom.addEventListener("input", (e) => {
   }
 });
 
-// vérification du email
+// vérification de l'email
 const inputMail = document.getElementById("email");
 inputMail.addEventListener("input", (e) => {
   e.stopPropagation();
@@ -98,7 +98,7 @@ inputDateNaissance.addEventListener("input", (e) => {
   }
 });
 
-// vérification du nontre de tournois joués
+// vérification du nombre de tournois joués
 const inputQuantity = document.getElementById("quantity");
 inputQuantity.addEventListener("input", (e) => {
   e.stopPropagation();
