@@ -302,12 +302,6 @@ body {
   z-index: -1;
 }
 
-#birthdate:active::after {
-  opacity: 0;
-  z-index: -1;
-}
-
-
 #quantity {
   padding: 8px 8px 30px 15px;
 }
