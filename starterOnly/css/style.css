@@ -17,6 +17,7 @@ body {
 
 /*\\\\\\\\\\\\\\\\\\\ header /////////////////////////*/
 
+
 .topnav {
   margin: 50px 0 67px 0;
 }
@@ -275,6 +276,37 @@ body {
   padding: 15px 8%;
   margin: 15px auto;
 }
+
+#birthdate {
+  position: relative;
+}
+
+#birthdate::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  border-radius: 10px;
+}
+
+#birthdate:focus::after {
+  opacity: 0;
+  z-index: -1;
+}
+
+#birthdate:not(:focus):valid::after {
+  opacity: 0;
+  z-index: -1;
+}
+
+#birthdate:active::after {
+  opacity: 0;
+  z-index: -1;
+}
+
 
 #quantity {
   padding: 8px 8px 30px 15px;

@@ -101,7 +101,7 @@
         <!-- <span class="close"></span> -->
         <button class="close" aria-label="Button close" aria-pressed="false" onclick="closeModal(this)"></button>
         <div class="modal-body">
-          <form name="reserve" id="formulaire" action="index.html" method="post" onsubmit="validate(event)" novalidate>
+          <form name="reserve" id="formulaire" action="index.html" method="get" onsubmit="validate(event)" novalidate>
             <div class="formdata" data-error-visible="false"
               data-error="2 caractères minimums,les traits d'union et les espaces sont autorisés.">
               <label class="label">Prénom</label><br>
@@ -120,8 +120,8 @@
             <div class="formdata" data-error-visible="false" data-error="Votre âge doit être supérieur à 13 ans.">
               <label class="label">Date de naissance</label><br>
               <!-- ajout des propriétés onfocus ainsi qu'onblur qui permettent d'être conforme à la maquette-->
-              <input class="text-control" type="text" placeholder="" id="birthdate" name="birthdate"
-                onfocus="this.type='date'" onblur="this.type='text'" required /><br>
+              <input class="text-control" type="text" id="birthdate" name="birthdate" onfocus="this.type='date'"
+                onblur="" required /><br>
             </div>
             <div class="formdata" data-error-visible="false" data-error="Vous devez choisir une option.">
               <label class="label">À combien de tournois GameOn avez-vous déjà participé ?</label><br>

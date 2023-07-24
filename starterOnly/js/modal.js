@@ -26,6 +26,7 @@ function closeModal(event) {
   if (baliseArticle.hasAttribute("style") && formValue) {
     baliseArticle.removeAttribute("style");
     event.setAttribute("aria-pressed", true);
+    inputMail.style.backgroundColor = "white";
     footer.style.display = "flex";
     // reset du formulaire après la fermeture
     document.reserve.reset();
@@ -39,7 +40,7 @@ function closeModal(event) {
 }
 
 //////////////////////////////////contrôle du formulaire\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const regExpNomPrenom = new RegExp("^[a-zA-Z- ]{2,10}$");
+const regExpNomPrenom = new RegExp("^[a-zA-Z]{0,10}[ -]{0,1}[a-zA-Z]{2,10}$");
 const regExpEmail = new RegExp(
   "^[a-z0-9.-_]+[@]{1}[a-z0-9.-_]+[.]{1}[a-z]{2,4}$"
 );
@@ -69,6 +70,7 @@ inputNom.addEventListener("input", (e) => {
 
 // vérification de l'email
 const inputMail = document.getElementById("email");
+
 inputMail.addEventListener("input", (e) => {
   e.stopPropagation();
   const testMail = regExpEmail.test(inputMail.value);
@@ -90,7 +92,6 @@ inputDateNaissance.addEventListener("input", (e) => {
   const age_dt = new Date(month_diff);
   const année = age_dt.getUTCFullYear();
   const age = Math.abs(année - 1970);
-
   if (testNaissance && age > 13) {
     formData[3].dataset.errorVisible = false;
   } else {
